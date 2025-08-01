@@ -1,11 +1,7 @@
 services:
   - type: web
     name: youtube-transcript-api
-    runtime: python
-    repo: https://github.com/JUANPAJR/youtube-transcript-api
-    branch: main
+    env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
-    envVars:
-      - key: PORT
-        value: 10000
+    plan: free
